@@ -1,0 +1,50 @@
+var BeforeAfterFade = {
+	fade_for: 1, // seconds
+	hold_for: 3000, // milliseconds
+	repeat: 2, // number  of times to do the effect
+	repeated: 0, // number of times already done
+	on_before: true,
+	
+	crossfade: function(from, to, after_finish) {
+		new Effect.Fade(from, {duration: this.fade_for});
+		new Effect.Appear(to, {duration: this.fade_for, afterFinish: after_finish.bind(this)});
+	},
+	
+	cycle: function() {
+		var self = this;
+		setTimeout(function() {
+			if (self.repeated < self.repeat) {
+				var after_finish = self.cycle;
+			} else {
+				var after_finish = function() {}
+			}
+			if (self.on_before) {
+				self.to_after(after_finish);
+			} else {
+				self.to_before(after_finish);
+			}
+			self.repeated++;
+		}, self.hold_for);
+	},
+	
+	init: function() {
+		this.before = $('stress');
+		this.after = $('peace');
+		this.before.setStyle({position: 'absolute'});
+		this.after.setStyle({position: 'absolute'});
+		this.after.hide();
+		this.cycle();
+	},
+	
+	to_after: function(after_finish) {
+		this.crossfade(this.before, this.after, after_finish);
+		this.on_before = false;
+	},
+	
+	to_before: function(after_finish) {
+		this.crossfade(this.after, this.before, after_finish);
+		this.on_before = true;
+	}
+}
+
+Event.observe(window, 'load', BeforeAfterFade.init.bind(BeforeAfterFade));

@@ -1,0 +1,5 @@
+body { font-family: Arial, Verdana, san-serif; text-align: center; padding: 0; margin: 0; }
+/* Typography */
+
+/* Specific elements */
+div.container { width: 600px; margin-left: auto; margin-right: auto; text-align: left; position: relative; padding: 1px;}

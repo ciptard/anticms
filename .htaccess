@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^$ anticms/page.php?page=index [L,QSA]
+RewriteCond %{REQUEST_URI} !^/images
+RewriteCond %{REQUEST_URI} !^/stylesheets
+RewriteCond %{REQUEST_URI} !^/javascripts
+RewriteRule ^(.+)$ anticms/page.php?page=$1 [L,QSA]

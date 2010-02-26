@@ -1,0 +1,64 @@
+8
+
+dir
+8
+svn+ssh://jarrett@jarrettcolby.com/home/jarrett/svn/ryby/javascripts
+svn+ssh://jarrett@jarrettcolby.com/home/jarrett/svn/ryby
+
+
+
+2010-02-17T06:27:35.470707Z
+3
+jarrett
+
+
+svn:special svn:externals svn:needs-lock
+
+prototype.js
+file
+
+
+
+
+2010-02-17T04:02:28.000000Z
+965fe52b851d8ff3c2b915ada9fb273f
+2010-02-17T06:27:35.470707Z
+3
+jarrett
+
+effects.js
+file
+
+
+
+
+2009-10-08T17:23:34.000000Z
+0efe4a1f7374463232bc598926a7b4d4
+2010-02-17T06:27:35.470707Z
+3
+jarrett
+
+fade.js
+file
+
+
+
+
+2010-02-17T05:36:47.000000Z
+b604a1780e1320ef21dc88272dd00259
+2010-02-17T06:27:35.470707Z
+3
+jarrett
+
+scriptaculous.js
+file
+
+
+
+
+2009-10-08T17:23:34.000000Z
+f333a7a32a2b7549853d606e50bee5d5
+2010-02-17T06:27:35.470707Z
+3
+jarrett
+
